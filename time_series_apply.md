@@ -70,3 +70,4 @@ auto.arima(y)
 forecast(auto.arima(diff_data))
 plot(forecast(auto.arima(diff_data)))
 ```
+![image](https://github.com/kaoyuching/Apply-time-series-with-forecast-/blob/master/arima_1.png)
