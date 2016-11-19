@@ -1,24 +1,30 @@
 # Apply-time-series-with-forecast-
 ###### time series use "forecast" ######
+'''R
 x <- read.csv("C:/Users/User/Desktop/data_mining/time.csv",header = T) 
 x1 <- x[1:15,]
+'''
 
 #####translate data x as time series data
 #####aggregate time series object by month
+'''R
 y <- ts(x1[,2],start = c(2015,6),end = c(2016,8),frequency = 12)
 plot(y,type="o",col="blue")
+'''
 
 ######original data
+'''R
 z <- ts(x[,2],start = c(2015,6),end = c(2016,10),frequency = 12)
 plot(z,type="o",col="blue")
 
 
-library(forecast)
-
 #####basic forecasts
 #####forecast from mean
+'''R
+library(forecast)
 mf <- meanf(y,h = 4,level = c(90,95),fan=FALSE,lambda=NULL)
 plot(mf)
+'''
 
 #####naive method
 nv <- naive(y,h = 6,level = c(90,95),fan=FALSE,lambda=NULL)
