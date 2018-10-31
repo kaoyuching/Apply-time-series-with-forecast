@@ -1,4 +1,4 @@
-# Apply-time-series-with-forecast-
+# Apply-time-series-with-forecast
 ###### time series use "forecast" ######
 ```{R}
 #input data
